@@ -15,21 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game\Main.cpp">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OGL3D\source\OGL3D\Window\OWindow.cpp">
+    <ClCompile Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OGL3D\source\OGL3D\Game\OGame.cpp">
+    <ClCompile Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OGL3D\include\OGL3D\Window\OWindow.h">
+    <ClInclude Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LTexture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OGL3D\include\OGL3D\Game\OGame.h">
+    <ClInclude Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LOpenGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\freeglut.3.0.0.v140.1.0.2\build\freeglut.3.0.0.v140.props" Condition="Exists('..\packages\freeglut.3.0.0.v140.1.0.2\build\freeglut.3.0.0.v140.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -17,6 +18,19 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LTexture.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LUtil.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LOpenGL.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LTexture.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\05_texture_mapping_and_pixel_manipulation\05_texture_mapping_and_pixel_manipulation\LUtil.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -138,16 +152,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Game\Main.cpp" />
-    <ClCompile Include="OGL3D\source\OGL3D\Game\OGame.cpp" />
-    <ClCompile Include="OGL3D\source\OGL3D\Window\OWindow.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="OGL3D\include\OGL3D\Game\OGame.h" />
-    <ClInclude Include="OGL3D\include\OGL3D\Window\OWindow.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\freeglut.3.0.0.v140.1.0.2\build\freeglut.3.0.0.v140.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\freeglut.3.0.0.v140.1.0.2\build\freeglut.3.0.0.v140.props'))" />
+  </Target>
 </Project>
